@@ -1,8 +1,10 @@
 import React from 'react'
-
+import DashboardLayout from '../../layouts/DashboardLayout'
 function RecipientsList() {
   return (
-    <div>RecipientsList</div>
+    <DashboardLayout>
+      <div>RecipientsList</div>
+    </DashboardLayout>
   )
 }
 

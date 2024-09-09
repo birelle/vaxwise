@@ -5,7 +5,8 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import Dashboard from './pages/Dashboard'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { PrimeReactProvider } from 'primereact/api'
-import {ROUTES} from './routes';
+import RecipientsList from './pages/recipient/RecipientsList';
+import Healthcares from './pages/healthcare/Healthcares';
 
 function App() {
 
@@ -14,22 +15,9 @@ function App() {
     <PrimeReactProvider>
       <Router>
         <Routes>
-          
-        {/* {[...ROUTES].map((route, index) => (
-              <Route
-                key={index.toString() + route?.path}
-                path={route?.route}
-                element={<route.element />}
-                children={route?.Children?.map((child) => (
-                  <Route
-                    key={index.toString() + child.path}
-                    path={route?.route + child?.route}
-                    element={<child.element />}
-                  />
-                ))}
-              />
-            ))} */}
             <Route path='/' element={<Dashboard/>}/>
+            <Route path='/recipients' element={<RecipientsList/>}/>
+            <Route path='/doctor' element={<Healthcares/>}/>
         </Routes>
       </Router>
       </PrimeReactProvider>

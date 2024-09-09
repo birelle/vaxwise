@@ -1,8 +1,11 @@
 import React from 'react'
-
+import DashboardLayout from '../../layouts/DashboardLayout'
 function Healthcares() {
   return (
-    <div>Healthcares</div>
+     <DashboardLayout>
+
+       <div>Healthcares</div>
+     </DashboardLayout>
   )
 }
 
