@@ -13,6 +13,7 @@ function Navbar() {
             <p>Name</p>
         </div>
         
+        
     </div>
   )
 }
