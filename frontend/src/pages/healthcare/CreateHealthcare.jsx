@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 function CreateHealthcare({ onClose, open }) {
   return (
-    <div className={`fixed inset-0 flex justify-center intems-center transition-colors ${open ? "visible bg-black/50" : "invisible"}`}>
-      <div className='w-2/6 h-5/6 bg-white rounded-lg p-4'>
-        <h1 className='text-center text-2xl text-green-400 capitalize py-12'>add healthecare</h1>
+    <div className={`fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center  transition-colors z-10 ${open ? "visible bg-black/50" : "invisible"}`}>
+      <div className='bg-white p-6 rounded-lg shadow-lg w-1/3 h-4/6 pb-5'>
+        <h1 className='text-center text-2xl text-green-400 capitalize py-6'>add healthecare</h1>
         <p className='text-center text-gray-500'>please enter the informstion o the healthcare personel</p>
         <div className='w-full flex flex-col gap-y-4 py-4 '>
           <input placeholder='Name' typeof='text' className='p-3 border-2 border-gray-300 rounded-lg focus:border-gray-300 outline-none' />

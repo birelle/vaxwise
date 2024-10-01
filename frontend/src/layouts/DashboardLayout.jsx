@@ -1,7 +1,6 @@
 import React, { Children } from 'react'
 import Navbar from '../components/dashboard/Navbar'
 import Sidebar from '../components/dashboard/Sidebar'
-import { Outlet } from 'react-router-dom'
 
 function DashboardLayout({children}) {
   return (

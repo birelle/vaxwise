@@ -1,7 +1,6 @@
-// Import necessary modules and components
-import React, { useState, useEffect } from "react";
-import DashboardLayout from "../../layouts/DashboardLayout";
-import CreateHealthcare from "../healthcare/CreateHealthcare";
+import React from 'react'
+
+import DashboardLayout from '../../layouts/DashboardLayout';
 import { FaSquarePlus } from "react-icons/fa6";
 import { ActionButtonTemplate } from "../../components/ActionButtons";
 
@@ -14,11 +13,10 @@ import { InputText } from "primereact/inputtext";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { TriStateCheckbox } from "primereact/tristatecheckbox";
-
-
-
-function Healthcares() {
-  const [customers, setCustomers] = useState(null);
+import {useState, useEffect} from 'react'
+import CreateVaccine from './CreateVaccine';
+function VaccineList() {
+    const [customers, setCustomers] = useState(null);
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
     name: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
@@ -120,22 +118,22 @@ function Healthcares() {
   };
 
   const header = renderHeader();
-  const [addHealthcare, setAddHealthcare] = useState(false);
+  const [addVaccine, setAddVaccine] = useState(false);
   return (
+    
     <DashboardLayout>
-      <div className="mt-4">
-        <CreateHealthcare
+            <div>
+        <CreateVaccine
           onClose={() => {
-            setAddHealthcare(!addHealthcare);
+            setAddVaccine(!addVaccine);
           }}
-          open={addHealthcare}
+          open={addVaccine}
         />
-        <h1 className="text-2xl font-bold p-8">Healthcare </h1>
+        <h1 className="text-2xl font-bold p-8">vaccines</h1>
         {/* Render DoctorsList within the Healthcare Dashboard */}
-
         <button
           onClick={() => {
-            setAddHealthcare(true);
+            setAddVaccine(true);
           }}
           className="mb-8 float-right flex mr-5 text-white w-fit h-fit p-4 rounded-full shadow-lg hover:shadow-teal-700/35 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110"
         >
@@ -202,7 +200,7 @@ function Healthcares() {
         </div>
       </div>
     </DashboardLayout>
-  );
+  )
 }
 
-export default Healthcares;
+export default VaccineList

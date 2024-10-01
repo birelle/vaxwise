@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function CreateRecipinet({open, onClose}) {
+function CreateRecipient({open, onClose}) {
   const [addParent, setAddParent] = useState(false);
   return (
     <div className={`fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center  transition-colors ${open ? "visible bg-black/50" : "invisible"}`}>
@@ -85,7 +85,7 @@ function CreateRecipinet({open, onClose}) {
         <div className="w-full flex justify-between gap-4">
           <button
             type="button"
-            className="w-full px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400"
+            className="w-full p-4 rounded-lg bg-tetiary font-bold hover:bg-red-200"
             onClick={onClose}
           >
             Cancel
@@ -104,4 +104,4 @@ function CreateRecipinet({open, onClose}) {
   )
 }
 
-export default CreateRecipinet
+export default CreateRecipient

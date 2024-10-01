@@ -1,7 +1,11 @@
 import React, {useState} from 'react'
 import SidebarItem from '../SidebarItem'
 // import { SIDEBAR_ITEM } from '../../mocks/SidebarItemMock'
-import { MdDashboard } from "react-icons/md"
+import { MdDashboard, MdOutlineChildCare, MdOutlineVaccines } from "react-icons/md";
+import { RxDashboard } from "react-icons/rx";
+import { LiaUserNurseSolid } from "react-icons/lia";
+import { TbHospitalCircle } from "react-icons/tb";
+import { BsBarChartSteps } from "react-icons/bs";
 
 function Sidebar() {
     const [activeItem, setActiveItem] = useState('Dashboard');
@@ -9,36 +13,41 @@ function Sidebar() {
  const SIDEBAR_ITEM = [
     {
         title: 'Dashboard',
-        icon: <MdDashboard size={25}/>,
+        icon: <RxDashboard size={25}/>,
         path: '/'
     },
     {
         title: 'Patient',
-        icon: <MdDashboard size={25}/>,
+        icon: <MdOutlineChildCare size={25}/>,
         path: '/recipients'
     },
     {
-        title: 'Doctor',
-        icon: <MdDashboard size={25}/>,
+        title: 'healthcare',
+        icon: <LiaUserNurseSolid size={25}/>,
         path: '/doctor'
     },
     {
         title: 'Vaccine',
-        icon: <MdDashboard size={25}/>,
-        path: '/vaccines'
+        icon: <MdOutlineVaccines size={25}/>,
+        path: '/vaccine.list'
+    },
+    {
+        title: 'vaccination phase',
+        icon: <BsBarChartSteps size={25}/>,
+        path: '/vaccination.phase'
     },
     {
         title: 'Hospital',
-        icon: <MdDashboard size={25}/>,
+        icon: <TbHospitalCircle size={25}/>,
         path: '/hospital'
     },
 ]
   return (
     <>
-    <div className='flex justify-center items-center'>
+    <div className='flex px-5'>
 
-     <div className='w-24 h-24 text-4xl mt-5 text-white flex justify-center items-center rounded-full uppercase bg-primary'>
-            vm
+     <div className='w-full  text-4xl mt-5 text-white flex j rounded-lg  p-3 uppercase bg-primary'>
+            vaxwise
         </div>
     </div>
     <div className='flex flex-col mt-12'>
@@ -49,7 +58,7 @@ function Sidebar() {
                 title={item.title}key={index} 
                 icon={item.icon}
                 to={item.path}
-                active={activeItem === item.title} 
+                active={activeItem == item.title} 
                 onClick={() => setActiveItem(item.title)}
                 />
             ))}

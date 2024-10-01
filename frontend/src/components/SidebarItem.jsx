@@ -6,8 +6,8 @@ function SidebarItem({ title, icon, active, onClick, to }) {
     <Link to={to}>
       <div
         onClick={onClick}
-        className={`flex gap-4 p-4 w-full items-center hover:bg-secondary rounded-lg  hover:cursor-pointer  ${
-          active ? "bg-secondary" : ""
+        className={`flex gap-4 p-4 w-full items-center hover:bg-secondary/25 rounded-lg  hover:cursor-pointer  ${
+          active ? "bg-secondary/25" : ""
         }`}
       >
         <div className="text-[#66b5a3]">{icon}</div>

@@ -1,7 +1,5 @@
-// Import necessary modules and components
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from 'react'
 import DashboardLayout from "../../layouts/DashboardLayout";
-import CreateHealthcare from "../healthcare/CreateHealthcare";
 import { FaSquarePlus } from "react-icons/fa6";
 import { ActionButtonTemplate } from "../../components/ActionButtons";
 
@@ -14,10 +12,11 @@ import { InputText } from "primereact/inputtext";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { TriStateCheckbox } from "primereact/tristatecheckbox";
+import CreateHealthcare from '../healthcare/CreateHealthcare';
 
 
+function Hospitals() {
 
-function Healthcares() {
   const [customers, setCustomers] = useState(null);
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
@@ -122,6 +121,7 @@ function Healthcares() {
   const header = renderHeader();
   const [addHealthcare, setAddHealthcare] = useState(false);
   return (
+   
     <DashboardLayout>
       <div className="mt-4">
         <CreateHealthcare
@@ -130,8 +130,8 @@ function Healthcares() {
           }}
           open={addHealthcare}
         />
-        <h1 className="text-2xl font-bold p-8">Healthcare </h1>
-        {/* Render DoctorsList within the Healthcare Dashboard */}
+        <h1 className="text-2xl font-bold p-8">hospitals</h1>
+        {/* Render DoctorsList within the Healthcare */}
 
         <button
           onClick={() => {
@@ -202,7 +202,7 @@ function Healthcares() {
         </div>
       </div>
     </DashboardLayout>
-  );
+  )
 }
 
-export default Healthcares;
+export default Hospitals
